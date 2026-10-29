@@ -1,0 +1,681 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Portofolio David Victoria S P</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600&family=Josefin+Sans:wght@300;600&family=Bangers&family=Bowlby+One&family=Permanent+Marker&display=swap">
+<style>
+/* Layout: satu halaman panjang, header lengket dengan pengalih tema. P5 = potongan miring merah-hitam, P3 = lingkar dan garis tipis biru malam. */
+:root {
+  --bg: #0b0b0d;
+  --surface: #17171a;
+  --fg: #f4f1ee;
+  --muted: #a8a2a2;
+  --accent: #e60012;
+  --accent-ink: #ffffff;
+  --line: #2c2c31;
+  --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "Archivo", "Segoe UI", Arial, sans-serif;
+  --display-case: uppercase;
+  --display-weight: 400;
+  --display-track: 0.02em;
+  --skew: -7deg;
+  --unskew: 7deg;
+  --radius: 0px;
+  --clip: polygon(0 0, 100% 5%, 97% 100%, 2% 94%);
+  --tilt: -1.2deg;
+  color-scheme: dark;
+}
+:root[data-persona="p3"] {
+  --bg: #050b1f;
+  --surface: #0a1a3d;
+  --fg: #e8f6ff;
+  --muted: #86a9cc;
+  --accent: #3cc8ff;
+  --accent-ink: #04102a;
+  --line: #17365f;
+  --font-display: "Josefin Sans", "Century Gothic", "Trebuchet MS", sans-serif;
+  --display-case: uppercase;
+  --display-weight: 300;
+  --display-track: 0.14em;
+  --skew: 0deg;
+  --unskew: 0deg;
+  --radius: 18px;
+  --clip: none;
+  --tilt: 0deg;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+  overflow-x: hidden;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1040px; margin-inline: auto; }
+.only-p3 { display: none; }
+:root[data-persona="p3"] .only-p3 { display: block; }
+:root[data-persona="p3"] .only-p5 { display: none; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: var(--display-weight); text-transform: var(--display-case); letter-spacing: var(--display-track); line-height: 1.05; margin: 0; text-wrap: balance; }
+.label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+/* Header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+.top-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-block: 12px; }
+.brand { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--display-track); font-weight: var(--display-weight); font-size: 20px; text-decoration: none; }
+.brand b { color: var(--accent); font-weight: inherit; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; }
+nav a { text-decoration: none; color: var(--muted); padding: 4px 0; }
+nav a:hover { color: var(--fg); }
+.switch { display: inline-flex; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.switch button { font: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; padding: 8px 14px; background: transparent; color: var(--muted); border: 0; cursor: pointer; }
+.switch button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+
+/* Hero */
+.hero { position: relative; padding-block: 56px 48px; display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); }
+.hero h1 { font-size: clamp(38px, 9vw, 104px); position: relative; z-index: 1; }
+.hero h1 > span { display: block; }
+:root[data-persona="p3"] .hero h1 { font-size: clamp(32px, 5.6vw, 76px); }
+:root[data-persona="p3"] .hero h1 .l, :root[data-persona="p3"] .rn .l { display: inline; }
+:root[data-persona="p3"] .rn .sp { display: inline-block; }
+.slab { display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 0.04em 0.22em 0.08em; transform: skew(var(--skew)); margin-bottom: 4px; }
+:root[data-persona="p3"] .slab { background: transparent; color: var(--accent); padding: 0; transform: none; }
+.hero p { max-width: 54ch; color: var(--muted); font-size: 18px; margin: 0; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.cta { display: inline-block; font-weight: 600; text-decoration: none; background: var(--fg); color: var(--bg); padding: 12px 22px; border-radius: var(--radius); transform: skew(var(--skew)); width: fit-content; }
+.cta > span { display: inline-block; transform: skew(var(--unskew)); }
+.cta:hover { background: var(--accent); color: var(--accent-ink); }
+.clock { width: min(280px, 70vw); aspect-ratio: 1; justify-self: start; }
+.clock svg { width: 100%; height: 100%; display: block; }
+.clock text { fill: var(--fg); font-family: var(--font-display); letter-spacing: 0.1em; }
+.clock .sub { fill: var(--muted); font-family: var(--font-body); font-size: 9px; letter-spacing: 0.2em; }
+@media (min-width: 820px) { .hero { grid-template-columns: minmax(0, 1fr) 280px; align-items: center; } .hero.p5-only-cols { grid-template-columns: 1fr; } .clock { justify-self: end; } }
+:root:not([data-persona="p3"]) .clock { display: none; }
+:root:not([data-persona="p3"]) .hero { grid-template-columns: minmax(0, 1fr); }
+
+/* Marquee */
+.strip { margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); background: var(--accent); color: var(--accent-ink); overflow: hidden; transform: rotate(var(--tilt)); border-block: 2px solid var(--fg); }
+:root[data-persona="p3"] .strip { background: transparent; color: var(--accent); border-color: var(--line); border-width: 1px; }
+.strip div { display: flex; gap: 40px; width: max-content; padding-block: 8px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.12em; font-size: 20px; animation: run 28s linear infinite; }
+@keyframes run { to { transform: translateX(-50%); } }
+
+/* Sections */
+section { padding-block: 64px 0; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(34px, 7vw, 60px); }
+.about { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .about { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); } }
+.about p { margin: 0 0 14px; max-width: 62ch; }
+.facts { display: grid; gap: 12px; align-content: start; margin: 0; }
+.facts div { border-left: 3px solid var(--accent); padding-left: 14px; }
+.facts dt { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font-weight: 600; }
+
+.projects { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px 28px; clip-path: var(--clip); display: grid; gap: 10px; align-content: start; min-width: 0; transition: transform .2s ease; }
+.card:hover { transform: translateY(-4px); }
+.card .tag { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.card h3 { font-size: 28px; }
+.card p { margin: 0; color: var(--muted); }
+.card .tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.card .tech span { font-size: 12px; padding: 3px 10px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--fg); }
+.card a { font-weight: 600; margin-top: 8px; width: fit-content; }
+
+.stats { display: grid; gap: 4px 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.stat { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 16px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.stat b { font-weight: 600; }
+.stat small { grid-column: 1 / -1; color: var(--muted); }
+.pips { display: flex; gap: 6px; }
+.pips i { width: 22px; height: 10px; background: var(--line); transform: skew(var(--skew)); border-radius: calc(var(--radius) / 6); }
+:root[data-persona="p3"] .pips i { width: 12px; height: 12px; border-radius: 50%; }
+.pips i.on { background: var(--accent); }
+
+.contact { background: var(--accent); color: var(--accent-ink); padding: 36px 26px 40px; clip-path: var(--clip); border-radius: var(--radius); display: grid; gap: 14px; }
+:root[data-persona="p3"] .contact { background: var(--surface); color: var(--fg); border: 1px solid var(--accent); }
+.contact h2 { font-size: clamp(34px, 8vw, 72px); }
+.contact p { margin: 0; max-width: 52ch; }
+.contact .mail { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--display-track); font-weight: var(--display-weight); font-size: clamp(20px, 4.4vw, 30px); overflow-wrap: anywhere; user-select: all; }
+.contact button { font: inherit; font-weight: 600; width: fit-content; background: var(--bg); color: var(--fg); border: 0; padding: 10px 20px; cursor: pointer; border-radius: var(--radius); }
+.links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+@media (prefers-reduced-motion: reduce) { .strip div { animation: none; } .card { transition: none; } }
+
+/* ===== Latar & animasi bergaya Persona ===== */
+:root{--enter:slam}
+:root[data-persona="p3"]{--enter:rise}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bg i{position:absolute;display:block}
+/* P5: halftone merah, sabetan miring, serpihan putih */
+.bg .b1{inset:-30px;background:radial-gradient(circle,var(--accent) 22%,transparent 24%) 0 0/24px 24px;opacity:.16;-webkit-mask-image:linear-gradient(115deg,transparent 25%,#000 85%);mask-image:linear-gradient(115deg,transparent 25%,#000 85%);animation:dots 2.4s linear infinite}
+.bg .b2{left:-12%;top:18%;width:75%;height:40%;background:var(--accent);clip-path:polygon(0 30%,100% 0,92% 70%,6% 100%);opacity:.16;animation:slash 7s ease-in-out infinite alternate}
+.bg .b3{right:-6%;bottom:-6%;width:46%;height:52%;background:var(--fg);clip-path:polygon(30% 0,100% 10%,100% 100%,0 85%);opacity:.06;animation:shard 9s ease-in-out infinite alternate}
+/* P3: bulan, cincin berputar, garis vertikal Dark Hour */
+:root[data-persona="p3"] .bg .b1{inset:auto;right:-14vmin;top:-12vmin;width:78vmin;height:78vmin;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(60,200,255,.34),rgba(60,200,255,.08) 55%,transparent 70%);-webkit-mask-image:none;mask-image:none;opacity:1;animation:breathe 9s ease-in-out infinite}
+:root[data-persona="p3"] .bg .b2{left:auto;right:-30vmin;top:-28vmin;width:114vmin;height:114vmin;clip-path:none;border-radius:50%;background:transparent;border:1px dashed var(--accent);opacity:.28;animation:spin 140s linear infinite}
+:root[data-persona="p3"] .bg .b3{inset:0;right:auto;bottom:auto;width:auto;height:auto;clip-path:none;opacity:1;background:repeating-linear-gradient(90deg,transparent 0 58px,rgba(60,200,255,.06) 58px 59px),linear-gradient(0deg,rgba(60,200,255,.12),transparent 40%);animation:none}
+@keyframes dots{to{transform:translate(24px,24px)}}
+@keyframes slash{from{transform:translate(-3%,0) rotate(-2deg)}to{transform:translate(6%,6%) rotate(1deg)}}
+@keyframes shard{from{transform:translate(0,0)}to{transform:translate(-5%,-4%) rotate(-2deg)}}
+@keyframes breathe{50%{transform:scale(1.06);opacity:.75}}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* Masuk halaman: judul menghantam (P5) / naik pelan (P3) */
+.slab{animation:var(--enter) .75s cubic-bezier(.2,.9,.25,1) both}
+.hero h1 .slab+.slab{animation-delay:.14s}
+.hero .cta{animation:fadein .5s .55s both}
+@keyframes slam{0%{opacity:0;transform:translateX(-90vw) skew(var(--skew))}60%{opacity:1;transform:translateX(2%) skew(var(--skew))}100%{opacity:1;transform:skew(var(--skew))}}
+@keyframes rise{from{opacity:0;transform:translateY(24px);letter-spacing:.3em}to{opacity:1;transform:none}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+/* Jam P3: cincin bertitik berputar */
+.clock circle:nth-of-type(2){transform-box:fill-box;transform-origin:center;animation:spin 50s linear infinite}
+/* Ganti tema: sapuan miring */
+.wipe{position:fixed;inset:0 -25%;z-index:60;background:var(--accent);pointer-events:none;transform:translateX(-120%) skewX(-12deg);box-shadow:-40px 0 0 var(--fg),60px 0 0 var(--bg)}
+.wipe.go{animation:wipe .8s cubic-bezier(.7,0,.3,1)}
+@keyframes wipe{0%{transform:translateX(-120%) skewX(-12deg)}50%{transform:translateX(0) skewX(-12deg)}100%{transform:translateX(120%) skewX(-12deg)}}
+:root:not([data-persona="p3"]) .card:hover{transform:translateY(-4px) rotate(-.6deg)}
+/* ===== Tipografi bergaya Persona ===== */
+.slab{box-shadow:7px 7px 0 var(--fg)}
+:root[data-persona="p3"] .slab{box-shadow:none;text-shadow:0 0 22px rgba(60,200,255,.6)}
+.sec-head h2{display:inline-block;background:var(--fg);color:var(--bg);padding:.04em .24em .1em;transform:skew(var(--skew)) rotate(-1deg);box-shadow:6px 6px 0 var(--accent)}
+:root[data-persona="p3"] .sec-head h2{background:none;color:var(--fg);padding:0 0 .12em;transform:none;box-shadow:none;border-bottom:1px solid var(--accent);text-shadow:0 0 18px rgba(60,200,255,.55)}
+.card h3{text-shadow:2px 2px 0 var(--accent)}
+:root[data-persona="p3"] .card h3{text-shadow:0 0 14px rgba(60,200,255,.4)}
+.card .tag{justify-self:start;background:var(--accent);color:var(--accent-ink);padding:2px 12px;transform:skew(var(--skew))}
+:root[data-persona="p3"] .card .tag{background:none;color:var(--accent);border:1px solid var(--accent);border-radius:99px;transform:none}
+.stat{transition:padding .18s ease,background .18s ease,border-color .18s ease}
+.stat:hover{background:var(--surface);padding-left:14px;border-bottom-color:var(--accent)}
+/* ===== Menu utama ala gim ===== */
+.gm{display:grid;gap:10px;margin-top:36px;max-width:440px}
+.gm a{position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:10px 20px;text-decoration:none;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--display-track);font-weight:var(--display-weight);font-size:28px;line-height:1.1;background:var(--bg);color:var(--fg);border:2px solid var(--fg);border-radius:var(--radius);transform:skew(var(--skew));transition:transform .18s cubic-bezier(.2,.9,.3,1.3),background .12s,color .12s;animation:menuin .5s cubic-bezier(.2,.9,.3,1) backwards}
+.gm a:nth-child(1){animation-delay:.5s}.gm a:nth-child(2){animation-delay:.6s}.gm a:nth-child(3){animation-delay:.7s}.gm a:nth-child(4){animation-delay:.8s}
+.gm a>*{display:block;transform:skew(var(--unskew))}
+.gm small{font-family:var(--font-body);font-size:12px;letter-spacing:.06em;text-transform:none;opacity:.75;font-weight:400}
+.gm a.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);transform:skew(var(--skew)) translateX(20px)}
+.gm a::before{content:"";position:absolute;left:-32px;top:50%;margin-top:-11px;border-left:20px solid var(--fg);border-top:11px solid transparent;border-bottom:11px solid transparent;opacity:0;transition:opacity .1s}
+.gm a.on::before{opacity:1}
+:root[data-persona="p3"] .gm a{background:var(--surface);border:1px solid var(--line);font-size:24px}
+:root[data-persona="p3"] .gm a.on{background:var(--fg);color:#0a2a9a;border-color:var(--accent);box-shadow:0 0 22px rgba(60,200,255,.45),6px 6px 0 var(--accent)}
+:root[data-persona="p3"] .gm a.on small{opacity:.85}
+:root[data-persona="p3"] .gm a::before{border-left-color:var(--accent);left:-30px}
+.gm-hint{margin:14px 0 0;font-size:13px;color:var(--muted)}
+@keyframes menuin{from{opacity:0;translate:-70px 0}}
+/* ===== P5: huruf ransom-note ala kartun, tiap huruf beda font, warna, dan miring ===== */
+.sp{display:inline-block;width:.3em}
+:root:not([data-persona="p3"]) .rn{background:none;color:inherit;padding:0;box-shadow:none;line-height:1.15}
+:root:not([data-persona="p3"]) .sec-head h2.rn{transform:none}
+:root:not([data-persona="p3"]) .l{display:inline-block;padding:.02em .1em .08em;margin:.02em .015em;line-height:1;text-shadow:none;transition:transform .15s}
+:root:not([data-persona="p3"]) .c0{background:#fff;color:#000;font-family:"Anton",Impact,sans-serif;transform:rotate(-4deg)}
+:root:not([data-persona="p3"]) .c1{background:#000;color:#fff;border:2px solid #fff;font-family:"Bangers","Comic Sans MS",cursive;font-size:1.08em;transform:rotate(3deg) translateY(-.04em)}
+:root:not([data-persona="p3"]) .c2{background:var(--accent);color:#fff;border:2px solid #000;font-family:"Bowlby One",Impact,sans-serif;font-size:.9em;transform:rotate(-2deg) translateY(.05em)}
+:root:not([data-persona="p3"]) .c3{background:#fff;color:var(--accent);font-family:"Permanent Marker",cursive;font-size:1.1em;transform:rotate(5deg)}
+:root:not([data-persona="p3"]) .c4{background:#000;color:var(--accent);border:2px solid var(--accent);font-family:"Anton",Impact,sans-serif;font-size:1.04em;transform:rotate(-3deg) translateY(-.03em)}
+:root:not([data-persona="p3"]) .c5{background:#f4f1ee;color:#000;font-family:"Bangers","Comic Sans MS",cursive;font-size:.98em;transform:rotate(2deg) translateY(.04em)}
+:root:not([data-persona="p3"]) .rn:hover .l{transform:rotate(0) translateY(-.06em)}
+:root:not([data-persona="p3"]) .gm a,:root:not([data-persona="p3"]) .brand{font-family:"Bangers","Anton",Impact,sans-serif;letter-spacing:.06em}
+:root:not([data-persona="p3"]) .gm a{font-size:30px}
+:root:not([data-persona="p3"]) .card h3{font-family:"Bangers","Anton",Impact,sans-serif;letter-spacing:.05em;font-size:32px}
+@media (prefers-reduced-motion:reduce){.l{transition:none!important}}
+/* ===== Pembuka P5: kartu panggilan ditusuk pisau lalu sobek ===== */
+:root.introing{overflow:hidden}
+:root.introing .slab,:root.introing .gm a,:root.introing .hero .cta{animation-play-state:paused}
+.intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden}
+.intro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(230,0,18,.28) 22%,transparent 24%) 0 0/26px 26px,#0b0b0d;animation:dotsbg 2.4s linear infinite}
+.intro.tear{pointer-events:none}
+.intro.tear::before{animation:icbg .45s .1s forwards}
+.ic-shake{position:relative;z-index:1;width:min(88vw,560px);aspect-ratio:3/2;animation:icshake .35s 1.65s}
+.ic-card{position:absolute;inset:0;transform:rotate(-12deg) skew(-8deg,4deg);animation:icin .65s cubic-bezier(.2,.9,.3,1) backwards}
+.ic-half{position:absolute;inset:0}
+.ic-half.a{clip-path:polygon(0 0,100% 0,100% 38%,91% 42%,82% 38%,72% 47%,63% 43%,54% 52%,46% 49%,38% 58%,28% 54%,18% 63%,10% 56%,0 62%)}
+.ic-half.b{clip-path:polygon(0 62%,10% 56%,18% 63%,28% 54%,38% 58%,46% 49%,54% 52%,63% 43%,72% 47%,82% 38%,91% 42%,100% 38%,100% 100%,0 100%)}
+.ic-face{position:absolute;inset:0;overflow:hidden;background:#000;box-shadow:inset 0 0 0 5px #f4f1ee}
+.ic-face::before{content:"";position:absolute;inset:-10%;background:repeating-radial-gradient(circle at 50% 50%,var(--accent) 0 6%,#000 6% 12%);animation:icpulse 1.4s ease-in-out infinite alternate}
+.ic-txt{z-index:2}
+.ic-txt{position:absolute;left:0;right:0;bottom:7%;text-align:center;transform:rotate(-8deg)}
+.ic-name{margin:0;font-family:var(--font-display);text-transform:uppercase;line-height:1.2}
+.ic-name.big{font-size:clamp(19px,5vw,36px)}
+.ic-name.sm{font-size:clamp(15px,3.6vw,24px);margin-top:4px}
+.ic-knife{position:absolute;z-index:3;left:50%;top:50%;width:clamp(58px,17%,100px);height:auto;transform:translate(-50%,-100%) rotate(32deg);transform-origin:50% 100%;filter:drop-shadow(6px 8px 0 rgba(0,0,0,.45));animation:icthrow .7s .95s cubic-bezier(.5,0,.9,.55) backwards}
+.ic-flash{position:absolute;inset:0;z-index:4;background:#fff;opacity:0;pointer-events:none;animation:icflash .3s 1.65s}
+.intro .skip{position:absolute;z-index:5;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));font:inherit;font-weight:600;background:transparent;color:#fff;border:2px solid #fff;padding:8px 18px;cursor:pointer;transform:skew(-7deg)}
+.intro.tear .skip{display:none}
+.intro.tear .ic-half.a{animation:ictA .9s cubic-bezier(.5,0,.8,.4) forwards}
+.intro.tear .ic-half.b{animation:ictB .9s cubic-bezier(.5,0,.8,.4) forwards}
+.intro.tear .ic-knife{animation:icdrop .9s ease-in forwards}
+@keyframes dotsbg{to{background-position:26px 26px,0 0}}
+@keyframes icbg{to{opacity:0}}
+@keyframes icin{from{scale:2.8;rotate:-50deg;opacity:0}}
+@keyframes icpulse{to{transform:scale(1.07)}}
+@keyframes icthrow{from{translate:60vw -80vh;scale:2.6;rotate:540deg}}
+@keyframes icflash{from{opacity:.85}to{opacity:0}}
+@keyframes icshake{20%{transform:translate(-9px,5px)}40%{transform:translate(8px,-6px)}60%{transform:translate(-5px,3px)}80%{transform:translate(3px,-2px)}}
+@keyframes ictA{to{translate:-22% -75%;rotate:-26deg;opacity:0}}
+@keyframes ictB{to{translate:18% 85%;rotate:22deg;opacity:0}}
+@keyframes icdrop{to{translate:22vw 85vh;rotate:140deg;opacity:0}}
+@media (prefers-reduced-motion:reduce){.gm a{animation:none;transition:none}.stat{transition:none}}
+@media (prefers-reduced-motion:reduce){.bg i,.slab,.hero .cta,.clock circle,.wipe.go{animation:none!important}}
+
+/* ===== Pembuka P3: tetesan, air naik, lalu menu jeda ===== */
+.p3i{position:fixed;inset:0;z-index:100;display:none;overflow:hidden;background:#030a2a;color:#fff;font-family:"Josefin Sans","Century Gothic",sans-serif}
+.p3i.out{animation:p3out .7s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes p3out{to{clip-path:polygon(0 0,0 0,-30% 100%,0 100%)}}
+.p3-drop{position:absolute;left:50%;top:50%;width:14px;height:14px;translate:-50% -50%;border-radius:50%;background:#bff0ff;box-shadow:0 0 18px 6px rgba(95,212,255,.8);opacity:0}
+.p3i.run .p3-drop{animation:p3drop .3s ease-in forwards}
+@keyframes p3drop{0%{opacity:1;top:-5%}99%{opacity:1;top:50%}100%{opacity:0;top:50%}}
+.p3-rip{position:absolute;left:50%;top:50%;width:0;height:0}
+.p3-rip i{position:absolute;left:0;top:0;width:10px;height:10px;translate:-50% -50%;border:2px solid #5fd4ff;border-radius:50%;opacity:0}
+.p3i.run .p3-rip i{animation:p3rip .8s .3s ease-out forwards}
+.p3i.run .p3-rip i:nth-child(2){animation-delay:.4s}
+.p3i.run .p3-rip i:nth-child(3){animation-delay:.5s}
+@keyframes p3rip{0%{opacity:1}100%{opacity:0;width:120vmax;height:120vmax}}
+.p3-deep{position:absolute;inset:0;transform:translateY(105%);background:linear-gradient(#2fc0ff,#0a52e0 35%,#062a9a 75%,#041870)}
+.p3i.run .p3-deep{animation:p3rise .7s .45s cubic-bezier(.45,0,.2,1) forwards}
+@keyframes p3rise{to{transform:none}}
+.p3-deep::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(110deg,transparent 0 60px,rgba(255,255,255,.06) 60px 120px)}
+.p3-wave{position:absolute;left:0;top:-59px;width:200%;height:60px;animation:p3wv 1.2s linear infinite}
+@keyframes p3wv{to{translate:-50% 0}}
+.p3-deep i{position:absolute;bottom:-30px;border-radius:50%;border:1.5px solid rgba(220,246,255,.7);background:rgba(220,246,255,.12);animation:p3bub linear infinite}
+@keyframes p3bub{to{translate:0 -120vh}}
+.p3-menu{position:absolute;inset:0}
+.p3-slab{position:absolute;left:-14%;top:-5%;width:64%;height:110%;background:rgba(3,14,70,.78);border-right:4px solid #5fd4ff;transform:skewX(-14deg) translateX(-110%)}
+.p3i.run .p3-slab{animation:p3slab .5s .95s cubic-bezier(.2,.9,.3,1) forwards}
+@keyframes p3slab{to{transform:skewX(-14deg)}}
+.p3-ring{position:absolute;right:-8vmin;top:50%;width:80vmin;height:80vmin;translate:0 -50%;border-radius:50%;border:2px solid rgba(255,255,255,.55);background:radial-gradient(circle,rgba(255,255,255,.2),transparent 62%);opacity:0}
+.p3-ring::before,.p3-ring::after{content:"";position:absolute;border-radius:50%}
+.p3-ring::before{inset:6%;border:2px dashed rgba(255,255,255,.5);animation:p3spin 30s linear infinite}
+.p3-ring::after{inset:22%;border:1px solid rgba(255,255,255,.7)}
+.p3i.run .p3-ring{animation:p3fi .6s 1s forwards}
+@keyframes p3fi{to{opacity:1}}
+@keyframes p3spin{to{rotate:360deg}}
+.p3-head{position:absolute;left:7vw;top:calc(9vh + env(safe-area-inset-top,0px));opacity:0}
+.p3-head small{display:block;font-size:12px;letter-spacing:.4em;color:#9fe3ff;text-transform:uppercase}
+.p3-head b{display:block;font-weight:300;font-size:clamp(20px,4vw,34px);letter-spacing:.24em;text-transform:uppercase}
+.p3i.run .p3-head{animation:p3fi .4s 1.1s forwards}
+.p3-list{position:absolute;left:5vw;top:50%;translate:0 -50%;display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.p3-list li{width:max-content;min-width:min(60vw,360px);padding:8px 34px 8px 20px;font-weight:600;font-size:clamp(24px,6vw,44px);letter-spacing:.12em;text-transform:uppercase;line-height:1.15;color:#bfeaff;background:transparent;box-shadow:0 0 0 transparent;margin-left:0;transform:skewX(-14deg);opacity:0;translate:-60px 0}
+.p3-list li span{display:block;transform:skewX(14deg)}
+.p3-list li:first-child{background:#fff;color:#0a2a9a;box-shadow:8px 8px 0 #29b6ff;margin-left:26px}
+.p3i.run .p3-list li:nth-child(1){animation:p3li .45s 1.05s cubic-bezier(.2,.9,.3,1) forwards,p3h1 1s 1.55s forwards}
+.p3i.run .p3-list li:nth-child(2){animation:p3li .45s 1.15s cubic-bezier(.2,.9,.3,1) forwards,p3h2 1s 1.55s forwards}
+.p3i.run .p3-list li:nth-child(3){animation:p3li .45s 1.25s cubic-bezier(.2,.9,.3,1) forwards,p3h3 1s 1.55s forwards}
+.p3i.run .p3-list li:nth-child(4){animation:p3li .45s 1.35s cubic-bezier(.2,.9,.3,1) forwards}
+.p3i.run .p3-list li:nth-child(5){animation:p3li .45s 1.45s cubic-bezier(.2,.9,.3,1) forwards}
+@keyframes p3li{to{opacity:1;translate:0 0}}
+@keyframes p3h1{0%,15%{background-color:#fff;color:#0a2a9a;box-shadow:8px 8px 0 #29b6ff;margin-left:26px}20%,70%{background-color:transparent;color:#bfeaff;box-shadow:0 0 0 transparent;margin-left:0}75%,100%{background-color:#fff;color:#0a2a9a;box-shadow:8px 8px 0 #29b6ff;margin-left:26px}}
+@keyframes p3h2{0%,18%{background-color:transparent;color:#bfeaff;box-shadow:0 0 0 transparent;margin-left:0}22%,40%{background-color:#fff;color:#0a2a9a;box-shadow:8px 8px 0 #29b6ff;margin-left:26px}45%,100%{background-color:transparent;color:#bfeaff;box-shadow:0 0 0 transparent;margin-left:0}}
+@keyframes p3h3{0%,43%{background-color:transparent;color:#bfeaff;box-shadow:0 0 0 transparent;margin-left:0}47%,65%{background-color:#fff;color:#0a2a9a;box-shadow:8px 8px 0 #29b6ff;margin-left:26px}70%,100%{background-color:transparent;color:#bfeaff;box-shadow:0 0 0 transparent;margin-left:0}}
+.p3-desc{position:absolute;left:0;right:0;bottom:0;padding:14px 5vw calc(14px + env(safe-area-inset-bottom,0px));background:#030e46;border-top:2px solid #5fd4ff;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:#cfeeff;opacity:0;translate:0 100%}
+.p3i.run .p3-desc{animation:p3dsc .4s 1.2s forwards}
+@keyframes p3dsc{to{opacity:1;translate:0 0}}
+.p3-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.p3i.run .p3-flash{animation:p3fl .3s 2.65s}
+@keyframes p3fl{0%{opacity:.9}100%{opacity:0}}
+.p3i .skip{position:absolute;z-index:5;right:16px;top:calc(16px + env(safe-area-inset-top,0px));font:inherit;font-size:14px;font-weight:600;letter-spacing:.14em;background:rgba(3,14,70,.6);color:#fff;border:1px solid #5fd4ff;padding:8px 18px;cursor:pointer;transform:skewX(-14deg)}
+
+/* ===== Gulir halus + responsif ===== */
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + var(--hh,72px) + 8px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+img,svg,video{max-width:100%}
+@media (max-width:900px){
+  .wrap{max-width:100%}
+  section{padding-block:52px 0}
+  .hero{padding-block:40px 36px}
+}
+@media (max-width:640px){
+  body{font-size:15px;padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px))}
+  .strip{margin-inline:calc(-1 * max(14px,env(safe-area-inset-left,0px)))}
+  .top-in{padding-block:8px;gap:6px 12px}
+  .brand{font-size:17px}
+  nav{gap:2px 14px;font-size:13px}
+  nav a{padding:6px 0}
+  .switch button{font-size:12px;padding:7px 11px;letter-spacing:.06em}
+  .hero{padding-block:28px 28px;gap:22px}
+  .hero p{font-size:16px}
+  .hero-meta{gap:10px 14px}
+  .cta{padding:11px 18px;font-size:14px}
+  .gm{max-width:100%;gap:8px;margin-top:28px;padding-right:12px}
+  .gm a,:root:not([data-persona="p3"]) .gm a{font-size:22px;padding:9px 14px;gap:8px}
+  :root[data-persona="p3"] .gm a{font-size:19px}
+  .gm small{font-size:11px}
+  .gm a.on{transform:skew(var(--skew)) translateX(10px)}
+  .gm a::before{left:-24px;border-left-width:15px;border-top-width:9px;border-bottom-width:9px;margin-top:-9px}
+  :root[data-persona="p3"] .gm a::before{left:-22px}
+  section{padding-block:44px 0}
+  .sec-head{margin-bottom:20px}
+  .card{padding:20px 18px 22px}
+  .card h3,:root:not([data-persona="p3"]) .card h3{font-size:24px}
+  .stat{grid-template-columns:minmax(0,1fr) auto}
+  .pips i{width:16px}
+  :root[data-persona="p3"] .pips i{width:11px;height:11px}
+  .contact{padding:28px 18px 32px}
+  footer{margin-top:36px}
+  .clock{width:min(220px,60vw)}
+  .intro .skip{right:12px}
+  .p3-list li{min-width:min(78vw,320px);padding:7px 24px 7px 16px}
+  .p3-slab{width:92%}
+  .p3-head{left:6vw}
+}
+@media (max-width:380px){
+  nav{font-size:12px;gap:2px 10px}
+  .switch button{padding:6px 9px}
+  .gm a,:root:not([data-persona="p3"]) .gm a{font-size:19px}
+}
+@media (hover:none){.card:hover,:root:not([data-persona="p3"]) .card:hover{transform:none}.stat:hover{padding-left:0;background:none}}
+</style>
+
+<div class="bg" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<div class="wipe" id="wipe" aria-hidden="true"></div>
+<div class="intro" id="intro" role="dialog" aria-label="Pembuka">
+  <div class="ic-shake">
+    <div class="ic-card" role="img" aria-label="Calling card: Steal Your Attention, David Victoria S P">
+      <div class="ic-half a"><div class="ic-face"><div class="ic-txt"><p class="ic-name big">Steal Your Attention</p><p class="ic-name sm">David Victoria S P</p></div></div></div>
+      <div class="ic-half b"></div>
+    </div>
+    <svg class="ic-knife" viewBox="0 0 100 340" aria-hidden="true" stroke="#000" stroke-width="3" stroke-linejoin="round">
+      <polygon points="36,150 64,150 62,260 50,340 38,260" fill="#e8e8ec"/>
+      <polygon points="50,150 64,150 62,260 50,340" fill="#a9a9b6" stroke="none"/>
+      <line x1="50" y1="162" x2="50" y2="300" stroke="#7d7d8a" stroke-width="3"/>
+      <path d="M8,140 Q30,118 50,132 Q70,118 92,140 Q70,160 50,150 Q30,160 8,140Z" fill="#d9d9de"/>
+      <rect x="40" y="40" width="20" height="95" rx="5" fill="#111"/>
+      <path d="M40,56 L60,70 M40,76 L60,90 M40,96 L60,110 M40,116 L60,130" stroke="#f4f1ee" stroke-width="4" fill="none"/>
+      <circle cx="50" cy="26" r="15" fill="#d9d9de"/><circle cx="50" cy="26" r="5" fill="#e60012" stroke="none"/>
+    </svg>
+  </div>
+  <div class="ic-flash"></div>
+  <button class="skip" type="button">Lewati</button>
+</div>
+
+<div class="p3i" id="p3i" role="dialog" aria-label="Pembuka Persona 3">
+  <i class="p3-drop" aria-hidden="true"></i>
+  <div class="p3-rip" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="p3-deep" aria-hidden="true"><svg class="p3-wave" viewBox="0 0 2400 60" preserveAspectRatio="none"><path fill="#2fc0ff" d="M0 30 Q150 0 300 30 T600 30 T900 30 T1200 30 T1500 30 T1800 30 T2100 30 T2400 30 V60 H0Z"/></svg></div>
+  <div class="p3-menu">
+    <div class="p3-slab" aria-hidden="true"></div>
+    <div class="p3-ring" aria-hidden="true"></div>
+    <div class="p3-head"><small>Portofolio</small><b>David Victoria S P</b></div>
+    <ul class="p3-list"><li><span>Beranda</span></li><li><span>Tentang</span></li><li><span>Karya</span></li><li><span>Statistik</span></li><li><span>Kontak</span></li></ul>
+    <div class="p3-desc">Masuk ke beranda</div>
+  </div>
+  <div class="p3-flash" aria-hidden="true"></div>
+  <button class="skip" type="button">Lewati</button>
+</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    
+    <nav aria-label="Navigasi">
+      <a href="#tentang">Tentang</a>
+      <a href="#karya">Karya</a>
+      <a href="#statistik">Statistik</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="switch" role="group" aria-label="Pilih tema">
+      <button id="btn-p5" type="button" aria-pressed="true">Persona 5</button>
+      <button id="btn-p3" type="button" aria-pressed="false">Persona 3</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="atas">
+  <div class="hero">
+    <div>
+      <p class="label" style="margin-bottom:14px">UI/UX Designer &amp; Frontend Developer · Surakarta</p>
+      <h1>
+        <span class="slab">David</span>
+        <span class="slab">Victoria S P</span>
+      </h1>
+      <p style="margin-top:22px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="hero-meta" style="margin-top:26px">
+        <a class="cta" href="#karya"><span>Lihat karya</span></a>
+        <a class="cta" href="#kontak" style="background:transparent;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg)"><span>Ajak kerja sama</span></a>
+      </div>
+      <nav class="gm" aria-label="Menu utama">
+        <a href="#tentang" class="on"><b>Tentang</b><small>Siapa di balik layar</small></a>
+        <a href="#karya"><b>Karya</b><small>Proyek terpilih</small></a>
+        <a href="#statistik"><b>Statistik</b><small>Level kemampuan</small></a>
+        <a href="#kontak"><b>Kontak</b><small>Ajak kerja sama</small></a>
+      </nav>
+    </div>
+    <div class="clock only-p3" aria-label="Jam Surakarta">
+      <svg viewBox="0 0 200 200" role="img" aria-label="Jam digital WIB">
+        <circle cx="100" cy="100" r="94" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="82" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="2 7"/>
+        <circle cx="100" cy="100" r="64" fill="var(--surface)" stroke="var(--accent)" stroke-width="1"/>
+        <text id="clock-time" x="100" y="108" text-anchor="middle" font-size="30">00:00</text>
+        <text class="sub" x="100" y="128" text-anchor="middle">WIB · SURAKARTA</text>
+      </svg>
+    </div>
+  </div>
+</main>
+
+<div class="strip" aria-hidden="true">
+  <div>
+    <span>Desain antarmuka</span><span>★</span><span>Frontend</span><span>★</span><span>Sistem desain</span><span>★</span><span>Riset pengguna</span><span>★</span><span>Prototipe</span><span>★</span>
+    <span>Desain antarmuka</span><span>★</span><span>Frontend</span><span>★</span><span>Sistem desain</span><span>★</span><span>Riset pengguna</span><span>★</span><span>Prototipe</span><span>★</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="tentang">
+    <div class="sec-head"><h2>Tentang</h2><span class="label">Siapa di balik layar</span></div>
+    <div class="about">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Lokasi</dt><dd>Lorem ipsum</dd></div>
+        <div><dt>Pengalaman</dt><dd>Lorem ipsum</dd></div>
+        <div><dt>Alat utama</dt><dd>Lorem ipsum</dd></div>
+        <div><dt>Status</dt><dd>Lorem ipsum</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="karya">
+    <div class="sec-head"><h2>Karya</h2><span class="label">Proyek terpilih</span></div>
+    <div class="projects">
+      <article class="card">
+        <span class="tag">Lorem</span>
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="tech"><span>Lorem</span><span>Ipsum</span><span>Dolor</span></div>
+        <a href="#kontak">Lorem ipsum</a>
+      </article>
+      <article class="card">
+        <span class="tag">Ipsum</span>
+        <h3>Dolor Sit</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="tech"><span>Lorem</span><span>Ipsum</span><span>Dolor</span></div>
+        <a href="#kontak">Lorem ipsum</a>
+      </article>
+      <article class="card">
+        <span class="tag">Dolor</span>
+        <h3>Amet Elit</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <div class="tech"><span>Lorem</span><span>Ipsum</span></div>
+        <a href="#kontak">Lorem ipsum</a>
+      </article>
+      <article class="card">
+        <span class="tag">Sit amet</span>
+        <h3>Consectetur</h3>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="tech"><span>Lorem</span><span>Ipsum</span><span>Dolor</span></div>
+        <a href="#kontak">Lorem ipsum</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="statistik">
+    <div class="sec-head"><h2>Statistik</h2><span class="label">Level 1 sampai 5</span></div>
+    <div class="stats">
+      <div class="stat"><b>Desain antarmuka</b><span class="pips" role="img" aria-label="Level 5 dari 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><small>Lorem ipsum dolor sit amet</small></div>
+      <div class="stat"><b>Frontend</b><span class="pips" role="img" aria-label="Level 4 dari 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><small>Lorem ipsum dolor sit amet</small></div>
+      <div class="stat"><b>Riset pengguna</b><span class="pips" role="img" aria-label="Level 4 dari 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><small>Lorem ipsum dolor sit amet</small></div>
+      <div class="stat"><b>Kolaborasi</b><span class="pips" role="img" aria-label="Level 5 dari 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><small>Lorem ipsum dolor sit amet</small></div>
+      <div class="stat"><b>Animasi</b><span class="pips" role="img" aria-label="Level 3 dari 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><small>Lorem ipsum dolor sit amet</small></div>
+      <div class="stat"><b>Penulisan</b><span class="pips" role="img" aria-label="Level 3 dari 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><small>Lorem ipsum dolor sit amet</small></div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="contact">
+      <span class="label" style="color:inherit;opacity:.8">Kontak</span>
+      <h2>Ada proyek? Mari bicara.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <span class="mail" id="mail">halo@davidvictoria.example</span>
+      <button id="copy" type="button">Salin email</button>
+      <div class="links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a>
+      </div>
+    </div>
+    <footer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</footer>
+  </section>
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var b5 = document.getElementById("btn-p5");
+  var b3 = document.getElementById("btn-p3");
+  function setPersona(p) {
+    if (p === "p3") { root.setAttribute("data-persona", "p3"); } else { root.removeAttribute("data-persona"); }
+    b5.setAttribute("aria-pressed", String(p !== "p3"));
+    b3.setAttribute("aria-pressed", String(p === "p3"));
+    try { localStorage.setItem("persona", p); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("persona"); } catch (e) {}
+  setPersona(saved === "p3" ? "p3" : "p5");
+  var wipe = document.getElementById("wipe");
+  var calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function go(p) {
+    if (phase) { if (target === p) return; }
+    else if ((root.getAttribute("data-persona") === "p3") === (p === "p3")) return;
+    play(p);
+  }
+  b5.addEventListener("click", function () { go("p5"); });
+  b3.addEventListener("click", function () { go("p3"); });
+
+  document.querySelectorAll(".hero h1,.sec-head h2,.contact h2").forEach(function (h) {
+    h.setAttribute("aria-label", h.textContent.replace(/\s+/g, " ").trim());
+  });
+  var k = 0;
+  document.querySelectorAll(".hero h1 .slab,.sec-head h2,.contact h2,.ic-name").forEach(function (el) {
+    var t = el.textContent.trim(); el.textContent = ""; el.classList.add("rn");
+    for (var i = 0; i < t.length; i++) {
+      var s = document.createElement("span");
+      if (t[i] === " ") { s.className = "sp"; }
+      else { s.className = "l c" + ((k * 5 + (k >> 1)) % 6); s.textContent = t[i]; k++; }
+      s.setAttribute("aria-hidden", "true"); el.appendChild(s);
+    }
+  });
+  var intro = document.getElementById("intro");
+  var ha = intro.querySelector(".ic-half.a"), hb = intro.querySelector(".ic-half.b");
+  hb.innerHTML = ha.innerHTML; hb.setAttribute("aria-hidden", "true");
+  var p3i = document.getElementById("p3i");
+  var deep = p3i.querySelector(".p3-deep");
+  for (var j = 0; j < 22; j++) {
+    var bb = document.createElement("i"), sz = 6 + Math.random() * 16;
+    bb.style.cssText = "left:" + (Math.random() * 100).toFixed(1) + "%;width:" + sz.toFixed(0) + "px;height:" + sz.toFixed(0) + "px;animation-duration:" + (2.2 + Math.random() * 2.4).toFixed(2) + "s;animation-delay:-" + (Math.random() * 4).toFixed(2) + "s";
+    deep.appendChild(bb);
+  }
+  var phase = null, target = null, timers = [];
+  function later(f, ms) { timers.push(setTimeout(f, ms)); }
+  function clearT() { timers.forEach(clearTimeout); timers = []; }
+  function endIntro() {
+    if (!phase) return;
+    var ph = phase; phase = null; target = null; clearT();
+    setPersona(ph);
+    if (ph === "p5") {
+      intro.classList.add("tear");
+      later(function () { root.classList.remove("introing"); }, 450);
+      later(function () { intro.style.display = "none"; }, 1200);
+    } else {
+      p3i.classList.add("out");
+      later(function () { root.classList.remove("introing"); }, 300);
+      later(function () { p3i.style.display = "none"; p3i.classList.remove("run", "out"); }, 1000);
+    }
+  }
+  function play(p) {
+    clearT();
+    intro.style.display = "none"; intro.classList.remove("tear");
+    p3i.style.display = "none"; p3i.classList.remove("run", "out");
+    if (calm) { phase = target = null; setPersona(p); root.classList.remove("introing"); return; }
+    phase = target = p;
+    root.classList.add("introing");
+    void intro.offsetWidth;
+    if (p === "p5") {
+      setPersona("p5");
+      intro.style.display = "";
+      later(endIntro, 2100);
+      intro.querySelector(".skip").focus();
+    } else {
+      p3i.style.display = "block"; void p3i.offsetWidth; p3i.classList.add("run");
+      later(function () { setPersona("p3"); }, 2850);
+      later(endIntro, 2950);
+      p3i.querySelector(".skip").focus();
+    }
+  }
+  intro.addEventListener("click", endIntro);
+  p3i.addEventListener("click", endIntro);
+  document.addEventListener("keydown", function (e) {
+    if (phase && (e.key === "Escape" || e.key === "Enter" || e.key === " ")) { endIntro(); e.preventDefault(); }
+  });
+  play(root.getAttribute("data-persona") === "p3" ? "p3" : "p5");
+  var items = [].slice.call(document.querySelectorAll(".gm a"));
+  function pick(a) { items.forEach(function (x) { x.classList.toggle("on", x === a); }); }
+  items.forEach(function (a) {
+    a.addEventListener("mouseenter", function () { pick(a); });
+    a.addEventListener("focus", function () { pick(a); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+    var i = items.indexOf(document.activeElement);
+    if (i < 0) {
+      if (document.activeElement !== document.body || window.scrollY > 300) return;
+      i = items.findIndex(function (x) { return x.classList.contains("on"); });
+    }
+    var n = (i + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+    items[n].focus(); pick(items[n]); e.preventDefault();
+  });
+
+  var topbar = document.querySelector(".top");
+  function setHH() { root.style.setProperty("--hh", topbar.offsetHeight + "px"); }
+  setHH(); addEventListener("resize", setHH); addEventListener("load", setHH);
+  if (window.ResizeObserver) { new ResizeObserver(setHH).observe(topbar); }
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var id = a.getAttribute("href").slice(1), t = id && document.getElementById(id);
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" });
+      try { history.replaceState(null, "", "#" + id); } catch (er) {}
+    });
+  });
+  var clock = document.getElementById("clock-time");
+  function tick() {
+    try {
+      clock.textContent = new Intl.DateTimeFormat("id-ID", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Asia/Jakarta" }).format(new Date()).replace(".", ":");
+    } catch (e) {}
+  }
+  tick(); setInterval(tick, 20000);
+
+  var copy = document.getElementById("copy");
+  copy.addEventListener("click", function () {
+    var mail = document.getElementById("mail");
+    function sel() { var r = document.createRange(); r.selectNodeContents(mail); var s = getSelection(); s.removeAllRanges(); s.addRange(r); copy.textContent = "Teks terpilih, tekan salin"; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(mail.textContent).then(function () { copy.textContent = "Tersalin"; }, sel);
+    } else { sel(); }
+  });
+})();
+</script>
+
+</body></html>
